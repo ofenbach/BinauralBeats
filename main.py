@@ -10,6 +10,8 @@ def sinOsc(frequency, duration, amplitude=.5):      # 50% volume
     return val.astype(dtype=numpy.float32)
 
 def main():
+    """ Generates binaural audio on your headphones """
+
     print("'AUDIOPHILE' BINAURAL BEATS (PURE SINUS WAVES)")
     print()
     print("\t[OPTIONS] Select which beat you would like to hear:")
@@ -28,44 +30,34 @@ def main():
     wave_type = input("Enter the number you would like to hear:")
     print()
 
+    # load audio option
     pa = pyaudio.PyAudio()
     stream = pa.open(format=pyaudio.paFloat32, channels=2, rate=BITRATE, output=True)
-
     if wave_type == "1":
         print("[DELTA] 2HZ waves, sweet dreams ...")
         signal_left = sinOsc(frequency=60.0, duration=500.0)
         signal_right = sinOsc(frequency=62.0, duration=500.0)
-        stereo_signal = numpy.ravel(numpy.column_stack((signal_left, signal_right)))
-        stream.write(stereo_signal.tobytes())
-        stream.stop_stream()
-        stream.close()
-        pa.terminate()
     if wave_type == "2":
         print("[THETA] 4HZ waves, wind down ...")
         signal_left = sinOsc(frequency=70.0, duration=500.0)
         signal_right = sinOsc(frequency=74.0, duration=500.0)
-        stereo_signal = numpy.ravel(numpy.column_stack((signal_left, signal_right)))
-        stream.write(stereo_signal.tobytes())
-        stream.stop_stream()
-        stream.close()
-        pa.terminate()
     if wave_type == "3":
         print("[ALPHA] 8HZ waves, enjoy the calm ...")
         signal_left = sinOsc(frequency=70.0, duration=500.0)
         signal_right = sinOsc(frequency=78.0, duration=500.0)
-        stereo_signal = numpy.ravel(numpy.column_stack((signal_left, signal_right)))
-        stream.write(stereo_signal.tobytes())
-        stream.stop_stream()
-        stream.close()
-        pa.terminate()
     if wave_type == "4":
         print("[BETA] 20HZ waves, go have fun ...")
         signal_left = sinOsc(frequency=100.0, duration=500.0)
         signal_right = sinOsc(frequency=120.0, duration=500.0)
-        stereo_signal = numpy.ravel(numpy.column_stack((signal_left, signal_right)))
-        stream.write(stereo_signal.tobytes())
-        stream.stop_stream()
-        stream.close()
-        pa.terminate()
 
-main()
+
+    # play binaural audio
+    stereo_signal = numpy.ravel(numpy.column_stack((signal_left, signal_right)))
+    stream.write(stereo_signal.tobytes())
+    stream.stop_stream()
+    stream.close()
+    pa.terminate()
+
+
+if __name__ == "__main__":
+    main()
