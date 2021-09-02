@@ -1,3 +1,5 @@
+![ui](https://user-images.githubusercontent.com/29439003/131929490-bda0387a-d0ca-4a4a-888a-826cc3cc6fab.png)
+
 # BinauralBeats
 Binaural beats generator with delta, theta, alpha, beta waves.
 The lower frequency is on the left side, the higher on the right side of your ears.
