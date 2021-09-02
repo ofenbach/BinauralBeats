@@ -2,7 +2,7 @@ import pyaudio
 import numpy
 
 BITRATE = 96000                                     # change to 44100 if performance issues
-def sinOsc(frequency, duration, amplitude=.5):      # 50% volume
+def sinOsc(frequency, duration, amplitude=.5):      # 5% volume
     nframes = duration * BITRATE
     frames = numpy.arange(nframes)
     frame_frequency = frequency / BITRATE
@@ -35,20 +35,20 @@ def main():
     stream = pa.open(format=pyaudio.paFloat32, channels=2, rate=BITRATE, output=True)
     if wave_type == "1":
         print("[DELTA] 2HZ waves, sweet dreams ...")
-        signal_left = sinOsc(frequency=60.0, duration=500.0)
-        signal_right = sinOsc(frequency=62.0, duration=500.0)
+        signal_left = sinOsc(frequency=60.0, duration=1.0)
+        signal_right = sinOsc(frequency=62.0, duration=1.0)
     if wave_type == "2":
         print("[THETA] 4HZ waves, wind down ...")
-        signal_left = sinOsc(frequency=70.0, duration=500.0)
-        signal_right = sinOsc(frequency=74.0, duration=500.0)
+        signal_left = sinOsc(frequency=70.0, duration=1.0)
+        signal_right = sinOsc(frequency=74.0, duration=1.0)
     if wave_type == "3":
         print("[ALPHA] 8HZ waves, enjoy the calm ...")
-        signal_left = sinOsc(frequency=70.0, duration=500.0)
-        signal_right = sinOsc(frequency=78.0, duration=500.0)
+        signal_left = sinOsc(frequency=70.0, duration=1.0)
+        signal_right = sinOsc(frequency=78.0, duration=1.0)
     if wave_type == "4":
         print("[BETA] 20HZ waves, go have fun ...")
-        signal_left = sinOsc(frequency=100.0, duration=500.0)
-        signal_right = sinOsc(frequency=120.0, duration=500.0)
+        signal_left = sinOsc(frequency=100.0, duration=1.0)
+        signal_right = sinOsc(frequency=120.0, duration=1.0)
 
 
     # play binaural audio
