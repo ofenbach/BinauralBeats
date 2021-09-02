@@ -1,4 +1,5 @@
-![ui](https://user-images.githubusercontent.com/29439003/131929490-bda0387a-d0ca-4a4a-888a-826cc3cc6fab.png)
+![ui](https://user-images.githubusercontent.com/29439003/131929612-b4cad88d-728f-4c16-bf4b-aadc2736e01d.png)
+
 
 # BinauralBeats
 Binaural beats generator with delta, theta, alpha, beta waves.
