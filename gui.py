@@ -219,331 +219,103 @@ window.geometry("1280x720")
 window.configure(bg = "#FFFFFF")
 
 
-canvas = Canvas(
-    window,
-    bg = "#FFFFFF",
-    height = 720,
-    width = 1280,
-    bd = 0,
-    highlightthickness = 0,
-    relief = "ridge"
-)
+canvas = Canvas(window,bg = "#FFFFFF",height = 720,width = 1280,bd = 0,highlightthickness = 0,relief = "ridge")
 
 canvas.place(x = 0, y = 0)
-canvas.create_text(
-    387.0,
-    23.0,
-    anchor="nw",
-    text="Binaural Beat Generator",
-    fill="#000000",
-    font=("Roboto", 48 * -1)
-)
+canvas.create_text(387.0,23.0, anchor="nw",    fill="#000000",font=("Roboto", 48 * -1), text="Binaural Beat Generator",)
 
-button_image_1 = PhotoImage(
-    file=relative_to_assets("button_1.png"))
-button_1 = Button(
-    image=button_image_1,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_alpha11,
-    relief="flat"
-)
-button_1.place(
-    x=121.0,
-    y=304.0,
-    width=281.0,
-    height=38.0
-)
+# Alpha 11HZ
+button_image_alpha_11 = PhotoImage(file=relative_to_assets("button_alpha_11.png"))
+button_alpha_11 = Button(image=button_image_alpha_11,borderwidth=0,highlightthickness=0,command=generate_alpha11,relief="flat")
+button_alpha_11.place(x=121.0,y=304.0,width=281.0,height=38.0)
 
-button_image_2 = PhotoImage(
-    file=relative_to_assets("button_2.png"))
-button_2 = Button(
-    image=button_image_2,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_theta5,
-    relief="flat"
-)
-button_2.place(
-    x=498.0,
-    y=304.0,
-    width=281.0,
-    height=38.0
-)
+button_image_alpha_10 = PhotoImage(file=relative_to_assets("button_alpha_10.png"))
+button_alpha_10 = Button(image=button_image_alpha_10,borderwidth=0,highlightthickness=0,command=generate_alpha10,relief="flat")
+button_alpha_10.place(x=121.0,y=364.0,width=281.0,height=38.0)
 
-button_image_3 = PhotoImage(
-    file=relative_to_assets("button_3.png"))
-button_3 = Button(
-    image=button_image_3,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_beta13,
-    relief="flat"
-)
-button_3.place(
-    x=871.0,
-    y=244.0,
-    width=281.0,
-    height=38.0
-)
+button_image_alpha_12 = PhotoImage(file=relative_to_assets("button_alpha_12.png"))
+button_alpha_12 = Button(image=button_image_alpha_12, borderwidth=0, highlightthickness=0, command=generate_alpha12, relief="flat")
+button_alpha_12.place(x=121.0, y=244.0, width=281.0, height=38.0)
 
-button_image_4 = PhotoImage(
-    file=relative_to_assets("button_4.png"))
-button_4 = Button(
-    image=button_image_4,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_alpha10,
-    relief="flat"
-)
-button_4.place(
-    x=121.0,
-    y=364.0,
-    width=281.0,
-    height=38.0
-)
+button_image_delta_05 = PhotoImage(file=relative_to_assets("button_delta_05.png"))
+button_delta_05 = Button(image=button_image_delta_05,borderwidth=0,highlightthickness=0,command=generate_delta05,relief="flat")
+button_delta_05.place(x=498.0, y=544.0, width=281.0, height=38.0)
 
-button_image_5 = PhotoImage(
-    file=relative_to_assets("button_5.png"))
-button_5 = Button(
-    image=button_image_5,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_theta3,
-    relief="flat"
-)
-button_5.place(
-    x=498.0,
-    y=364.0,
-    width=281.0,
-    height=38.0
-)
+button_image_alpha_9 = PhotoImage(file=relative_to_assets("button_alpha_9.png"))
+button_alpha_9 = Button(image=button_image_alpha_9,borderwidth=0,highlightthickness=0,command=generate_alpha11,relief="flat")
+button_alpha_9.place(x=121.0, y=424.0, width=281.0,height=38.0)
 
-button_image_6 = PhotoImage(
-    file=relative_to_assets("button_6.png"))
-button_6 = Button(
-    image=button_image_6,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_beta14,
-    relief="flat"
-)
-button_6.place(
-    x=871.0,
-    y=304.0,
-    width=281.0,
-    height=38.0
-)
+button_image_alpha_8 = PhotoImage(file=relative_to_assets("button_alpha_8.png"))
+button_alpha_8 = Button(image=button_image_alpha_8, borderwidth=0, highlightthickness=0, command=generate_alpha8, relief="flat")
+button_alpha_8.place(x=121.0, y=484.0, width=281.0, height=38.0)
 
-button_image_7 = PhotoImage(
-    file=relative_to_assets("button_7.png"))
-button_7 = Button(
-    image=button_image_7,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_alpha12,
-    relief="flat"
-)
-button_7.place(
-    x=121.0,
-    y=244.0,
-    width=281.0,
-    height=38.0
-)
+button_image_alpha_7 = PhotoImage(file=relative_to_assets("button_alpha_7.png"))
+button_alpha_7 = Button(image=button_image_alpha_7, borderwidth=0, highlightthickness=0, command=generate_alpha7, relief="flat")
+button_alpha_7.place(x=121.0, y=544.0, width=281.0, height=38.0)
 
-button_image_8 = PhotoImage(
-    file=relative_to_assets("button_8.png"))
-button_8 = Button(
-    image=button_image_8,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_theta6,
-    relief="flat"
-)
-button_8.place(
-    x=498.0,
-    y=244.0,
-    width=281.0,
-    height=38.0
-)
 
-button_image_9 = PhotoImage(
-    file=relative_to_assets("button_9.png"))
-button_9 = Button(
-    image=button_image_9,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_delta05,
-    relief="flat"
-)
-button_9.place(
-    x=498.0,
-    y=544.0,
-    width=281.0,
-    height=38.0
-)
+# THETA
+button_image_theta_6 = PhotoImage(file=relative_to_assets("button_theta_6.png"))
+button_theta_6 = Button(image=button_image_theta_6,borderwidth=0,highlightthickness=0,command=generate_theta6,relief="flat")
+button_theta_6.place(x=498.0, y=244.0, width=281.0, height=38.0)
 
-button_image_10 = PhotoImage(
-    file=relative_to_assets("button_10.png"))
-button_10 = Button(
-    image=button_image_10,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_alpha11,
-    relief="flat"
-)
-button_10.place(
-    x=121.0,
-    y=424.0,
-    width=281.0,
-    height=38.0
-)
+button_image_theta_5 = PhotoImage(file=relative_to_assets("button_theta_5.png"))
+button_theta_5 = Button(image=button_image_theta_5,borderwidth=0,highlightthickness=0,command=generate_theta5,relief="flat")
+button_theta_5.place(x=498.0,y=304.0,width=281.0,height=38.0)
 
-button_image_11 = PhotoImage(
-    file=relative_to_assets("button_11.png"))
-button_11 = Button(
-    image=button_image_11,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_delta2,
-    relief="flat"
-)
-button_11.place(
-    x=498.0,
-    y=424.0,
-    width=281.0,
-    height=38.0
-)
+button_image_theta_3 = PhotoImage(file=relative_to_assets("button_theta_3.png"))
+button_theta_3 = Button(image=button_image_theta_3,borderwidth=0, highlightthickness=0,command=generate_theta3,relief="flat")
+button_theta_3.place(x=498.0,y=364.0,width=281.0,height=38.0)
 
-button_image_12 = PhotoImage(
-    file=relative_to_assets("button_12.png"))
-button_12 = Button(
-    image=button_image_12,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_beta15,
-    relief="flat"
-)
-button_12.place(
-    x=871.0,
-    y=364.0,
-    width=281.0,
-    height=38.0
-)
 
-button_image_13 = PhotoImage(
-    file=relative_to_assets("button_13.png"))
-button_13 = Button(
-    image=button_image_13,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_alpha8,
-    relief="flat"
-)
-button_13.place(
-    x=121.0,
-    y=484.0,
-    width=281.0,
-    height=38.0
-)
+# DELTA
+button_image_delta_1 = PhotoImage(file=relative_to_assets("button_delta_1.png"))
+button_delta_1 = Button(image=button_image_delta_1,borderwidth=0,highlightthickness=0,command=generate_delta1,relief="flat")
+button_delta_1.place(x=498.0,y=484.0,width=281.0,height=38.0)
 
-button_image_14 = PhotoImage(
-    file=relative_to_assets("button_14.png"))
-button_14 = Button(
-    image=button_image_14,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_alpha7,
-    relief="flat"
-)
-button_14.place(
-    x=121.0,
-    y=544.0,
-    width=281.0,
-    height=38.0
-)
+button_image_delta_2 = PhotoImage(file=relative_to_assets("button_delta_2.png"))
+button_delta_2 = Button(image=button_image_delta_2, borderwidth=0, highlightthickness=0, command=generate_delta2, relief="flat")
+button_delta_2.place(x=498.0, y=424.0, width=281.0, height=38.0)
 
-button_image_15 = PhotoImage(
-    file=relative_to_assets("button_15.png"))
-button_15 = Button(
-    image=button_image_15,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_delta1,
-    relief="flat"
-)
-button_15.place(
-    x=498.0,
-    y=484.0,
-    width=281.0,
-    height=38.0
-)
 
-button_image_16 = PhotoImage(
-    file=relative_to_assets("button_16.png"))
-button_16 = Button(
-    image=button_image_16,
-    borderwidth=0,
-    highlightthickness=0,
-    command=generate_beta16,
-    relief="flat"
-)
-button_16.place(
-    x=871.0,
-    y=424.0,
-    width=281.0,
-    height=38.0
-)
+# BETA
+button_image_beta_13 = PhotoImage(file=relative_to_assets("button_beta_13.png"))
+button_beta_13 = Button(image=button_image_beta_13,borderwidth=0,highlightthickness=0,command=generate_beta13,relief="flat")
+button_beta_13.place(x=871.0,y=244.0,width=281.0,height=38.0)
 
-canvas.create_text(
-    920.0,
-    58.0,
-    anchor="nw",
-    text="Be careful with beta waves.\nThey can cause anxiety.\nUse these for strong concentration.",
-    fill="#000000",
-    font=("Roboto", 16 * -1)
-)
+button_image_beta_14 = PhotoImage(file=relative_to_assets("button_beta_14.png"))
+button_beta_14 = Button(image=button_image_beta_14,borderwidth=0,highlightthickness=0,command=generate_beta14,relief="flat")
+button_beta_14.place(x=871.0,y=304.0,width=281.0,height=38.0)
 
-canvas.create_text(
-    532.0,
-    620.0,
-    anchor="nw",
-    text="Delta recommended for sleep.\nTheta for deep meditation.",
-    fill="#000000",
-    font=("Roboto", 16 * -1)
-)
+button_image_beta_15 = PhotoImage(file=relative_to_assets("button_beta_15.png"))
+button_beta_15 = Button(image=button_image_beta_15, borderwidth=0, highlightthickness=0, command=generate_beta15, relief="flat")
+button_beta_15.place( x=871.0, y=364.0, width=281.0, height=38.0)
 
-canvas.create_text(
-    156.0,
-    620.0,
-    anchor="nw",
-    text="Awake but alert. \nUse this for meditation\nand concentrating.",
-    fill="#000000",
-    font=("Roboto", 16 * -1)
-)
+button_image_beta_16 = PhotoImage(file=relative_to_assets("button_beta_16.png"))
+button_beta_16 = Button(image=button_image_beta_16,borderwidth=0,highlightthickness=0,command=generate_beta16,relief="flat")
+button_beta_16.place(x=871.0,y=424.0,width=281.0,height=38.0)
 
-image_image_1 = PhotoImage(
-    file=relative_to_assets("image_1.png"))
-image_1 = canvas.create_image(
-    1017.0,
-    177.0,
-    image=image_image_1
-)
 
-image_image_2 = PhotoImage(
-    file=relative_to_assets("image_2.png"))
-image_2 = canvas.create_image(
-    640.0,
-    177.0,
-    image=image_image_2
-)
+# Descriptions
+canvas.create_text(920.0,620,anchor="nw",fill="#000000",font=("Roboto", 16 * -1),
+    text="Be careful with beta waves.\nThey can cause anxiety.\nUse these for strong concentration.",)
 
-image_image_3 = PhotoImage(
-    file=relative_to_assets("image_3.png"))
-image_3 = canvas.create_image(
-    263.0,
-    177.0,
-    image=image_image_3
-)
+canvas.create_text(532.0,620.0,anchor="nw",fill="#000000",font=("Roboto", 16 * -1),
+    text="Delta recommended for sleep.\nTheta for deep meditation.",)
+
+canvas.create_text(156.0,620.0,anchor="nw",fill="#000000",font=("Roboto", 16 * -1),
+    text="Awake but alert. \nUse this for meditation\nand concentrating.",)
+
+
+# ICONS
+image_cup = PhotoImage(file=relative_to_assets("cup.png"))
+canvas.create_image(1017.0,177.0,image=image_cup)
+
+image_sleepy = PhotoImage(file=relative_to_assets("sleepy.png"))
+canvas.create_image(640.0,177.0,image=image_sleepy)
+
+image_alert = PhotoImage(file=relative_to_assets("alert.png"))
+canvas.create_image(263.0, 177.0,image=image_alert)
+
 window.resizable(False, False)
 window.mainloop()
