@@ -1,6 +1,10 @@
 ![ui](https://user-images.githubusercontent.com/29439003/131929612-b4cad88d-728f-4c16-bf4b-aadc2736e01d.png)
 
 
+## Latest project
+This project turned into a website:
+https://binauro.com
+
 # BinauralBeats
 Binaural beats generator with delta, theta, alpha, beta waves.
 The lower frequency is on the left side, the higher on the right side of your ears.
@@ -21,3 +25,6 @@ Beta Waves (13 to 30HZ)
 
 # HowTo
 Execute the file with python, select which type of waveform you want to hear. Enjoy!  
+
+## Other dev tools
+https://picmin.com
